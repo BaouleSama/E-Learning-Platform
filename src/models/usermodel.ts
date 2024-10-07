@@ -1,6 +1,7 @@
 
 import sequelize from '../config/database';
-import { IUsers, Role } from '../interfaces/Userinterfaces';
+import { IUsers, Role } from '../interfaces/UserInterfaces';
+
 
 
 // import DataTypes and Model from sequelize
