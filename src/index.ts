@@ -2,6 +2,8 @@ import express from "express";
 import sequelize from "./config/database";
 import dotenv from "dotenv";
 
+import createUSer from "./router/createUser"
+
 // import the User Model
 import User from "./models/usermodel";
 
@@ -10,6 +12,9 @@ dotenv.config();
 // gett he port for the server 
 const port = process.env.PORT
 const app = express()
+app.use(express.json());
+
+app.use("/", createUSer)
 
 
 //  connection to database 
