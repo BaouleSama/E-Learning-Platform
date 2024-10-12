@@ -8,7 +8,7 @@ const router = Router();
 
 
 // create a user with sequelize 
-async function createUser(username: string, password: string, role: Role = Role.Guest) {
+async function createUser(username: string, password: string, role: Role = Role.User) {
 
     // hash the password 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -22,7 +22,7 @@ async function createUser(username: string, password: string, role: Role = Role.
     return newUser;
 }
 
-router.post("/api/user", async (req: any, res: any) => {
+router.post("/api/create/user", async (req: any, res: any) => {
     try {
         const { username, password, role } = req.body;
 

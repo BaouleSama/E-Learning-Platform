@@ -3,6 +3,7 @@ import sequelize from "./config/database";
 import dotenv from "dotenv";
 
 import createUSer from "./router/createUser"
+import login from "./router/login"
 
 // import the User Model
 import User from "./models/usermodel";
@@ -15,6 +16,7 @@ const app = express()
 app.use(express.json());
 
 app.use("/", createUSer)
+app.use("/", login)
 
 
 //  connection to database 
@@ -22,7 +24,7 @@ sequelize.sync()
     .then(() => {
         console.log("\nDatabase synced successfully \n");
         // create the table. force if it's aleardy created 
-        return User.sync({ force: true });
+        return User.sync({ alter: true });
     })
     .then(() => {
         console.log("\nUser table created successfully \n");
