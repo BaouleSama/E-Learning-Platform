@@ -3,7 +3,9 @@ import sequelize from "./config/database";
 import dotenv from "dotenv";
 
 import createUSer from "./router/createUser"
+import getAllUsers from "./router/getAllUser"
 import login from "./router/login"
+import getUserById from "./router/getUserById"
 
 // import the User Model
 import User from "./models/usermodel";
@@ -17,6 +19,8 @@ app.use(express.json());
 
 app.use("/", createUSer)
 app.use("/", login)
+app.use("/", getAllUsers)
+app.use("/", getUserById)
 
 
 //  connection to database 

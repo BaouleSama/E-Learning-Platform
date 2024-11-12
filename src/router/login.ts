@@ -38,7 +38,7 @@ router.post("/api/login/user", async (req: any, res: any) => {
             return res.status(404).json({ message: "username or password incorrect" })
 
         // create a token for user after sign in 
-        const accessToken = jwt.sign({ userId: user.id }, secretKey)
+        const accessToken = jwt.sign({ userId: user.id, role: user.role }, secretKey)
 
         // return user and token 
         return res.status(201).json({ message: "Welcome Back", user: user, token: accessToken })

@@ -14,7 +14,7 @@
     "strictPropertyInitialization": false,
     "noImplicitAny": false,
     "noEmitOnError": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noUnusedLocals": false,
     "forceConsistentCasingInFileNames": true,
