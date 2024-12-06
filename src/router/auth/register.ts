@@ -1,8 +1,8 @@
 import { Router } from 'express';
 // Assuming you have these models defined
 import bcrypt from 'bcrypt';
-import User from '../models/usermodel';
-import { Role } from '../interfaces/UserInterfaces';
+import User from '../../models/usermodel';
+import { Role } from '../../interfaces/UserInterfaces';
 
 const router = Router();
 
@@ -22,7 +22,7 @@ async function createUser(username: string, password: string, role: Role = Role.
     return newUser;
 }
 
-router.post("/api/create/user", async (req: any, res: any) => {
+router.post("/create/user", async (req: any, res: any) => {
     try {
         const { username, password, role } = req.body;
 

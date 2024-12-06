@@ -1,7 +1,7 @@
 import { Router } from "express"
-import Courses from "../models/coursemodel"
-import User from "../models/usermodel"
-import authMiddleware from "../middleware/authMiddleware"
+import Courses from "../../models/coursemodel"
+import User from "../../models/usermodel"
+import authMiddleware from "../../middleware/authMiddleware"
 
 const router = Router()
 

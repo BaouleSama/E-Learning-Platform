@@ -1,6 +1,6 @@
 import { Router } from "express"
 import bcrypt from 'bcrypt';
-import User from '../models/usermodel';
+import User from '../../models/usermodel';
 
 const router = Router()
 
@@ -10,7 +10,7 @@ const jwt = require("jsonwebtoken")
 // import secret key from env file
 const secretKey = process.env.SECRET_KEY
 
-router.post("/api/login/user", async (req: any, res: any) => {
+router.post("/login/user", async (req: any, res: any) => {
     try {
         // get the username and passowrd input by user
         let { username, password } = req.body
