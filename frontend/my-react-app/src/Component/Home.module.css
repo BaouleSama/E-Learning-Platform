@@ -1,0 +1,22 @@
+.home {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 3em;
+}
+
+.home input {
+    width: 100%;
+    margin-top: 30px;
+    padding: 1em;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.home input::placeholder {
+    text-align: center;
+}

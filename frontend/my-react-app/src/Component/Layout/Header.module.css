@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+
+
+    border: 1px inset grey;
+}
+
+.logo {
+    color: blue;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    padding-left: 1.5em;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.signIn {
+    padding: .5em 1em;
+    background-color: blue;
+    border-radius: 4px;
+    color: #fff;
+}
