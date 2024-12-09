@@ -1,0 +1,26 @@
+.form {
+    margin: 0 auto;
+
+    width: 50%;
+    text-align: center;
+    margin-top: 5em;
+}
+
+label {
+    display: block;
+
+}
+
+input::placeholder {
+    padding: em;
+}
+
+button {
+    margin-top: 1.5em;
+    padding: .5em 7em;
+    background-color: blue;
+    color: #fff;
+    border-radius: 6px;
+    border: transparent;
+
+}

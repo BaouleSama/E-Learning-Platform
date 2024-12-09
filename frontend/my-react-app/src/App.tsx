@@ -3,32 +3,26 @@ import './App.css'
 import Footer from './Component/Layout/Footer'
 import Header from './Component/Layout/Header'
 import Home from './Component/Home'
+import { Routes, Route } from 'react-router-dom'
+import SignUp from './Component/Pages/SignUp'
 function App() {
 
 
   return (
     <>
-
       <Header />
-      <Home />
+
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+
       <Footer />
-
-
     </>
+
+
+
+
   )
 }
-
-
-// return (
-//   <>
-//     <Routes>
-//       <Route>
-//         <Header />
-//         <Footer />
-//       </Route>
-//     </Routes>
-
-//   </>
-// )
-
 export default App
